@@ -159,10 +159,370 @@ Hands up.
                     </section>
                 </section>
 
+                <section><!-- First Commands -->
+                    <section data-markdown>
+                        <script type="text/template">
+### So Let's Dive In!
+![placeholder image](img/boy-at-empty-pool.jpg "Empty Pool")
+                        </script>
+                    </section>
 
+                    <section data-markdown><!-- setup your git -->
+### Setup your git
+Open a shell, and...
+```bash
+# Install git
+sudo apt-get install git
 
+# Configure git, stores these in ~/.gitconfig
+git config --global user.name "my full name"
+git config --global user.email "your_email@example.com"
+git config --global core.editor vim
+git config --global color.ui auto
+```
+                    </section>
 
+                    <section><!-- commands overview -->
+                        <h2>Your first commands</h2>
+                        <ul>
+                        <li>
+                            <code>git init </code>
+                            <span class="fragment roll-in"> &lt;-- Create a new repository</span>
+                        </li>
+                        <li>
+                            <code>git add . </code>
+                            <span class="fragment roll-in"> &lt;-- Get ready to save my work</span>
+                        </li>
+                        <li>
+                            <code>git commit  </code>
+                            <span class="fragment roll-in"> &lt;-- Save 'added' work in a commit</span>
+                        </li>
+                        <hr/>
+                        <li>
+                            <code>git status </code>
+                            <span class="fragment roll-in"> &lt;-- Tell me what's going on</span>
+                        </li>
+                        <li>
+                            <code>git log </code>
+                            <span class="fragment roll-in"> &lt;-- Show changes that goit me here</span>
+                        </li>
+                        </ul>
+                    </section>
+                    <section><!-- setup your git -->
+                        <div data-markdown>
+## Create your repo
+```bash
+# Create a new homework repository
+mkdir homework      #WIN: md homework
+cd homework
+git init
 
+git status
+```
+
+Should show something like...
+                        </div>
+
+                        <div class="fragment roll-in" data-markdown>
+```bash
+mbgray@monolyth ~ % mkdir homework
+mbgray@monolyth ~ % cd homework
+mbgray@monolyth ~/homework % git init
+Initialized empty Git repository in /home/mbgray/homework/.git/
+mbgray@monolyth ~/homework (git)-[master] % git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+```
+                        </div>
+                    </section>
+
+                    <section><!-- Create some files -->
+                        <div data-markdown>
+## Create some files
+```
+touch lab1.txt      #WIN: echo $null >> lab1.txt
+touch lab2.txt      #WIN: echo $null >> lab2.txt
+git status
+```
+
+Should show something like...
+                        </div>
+
+                        <div data-markdown class="fragment roll-in">
+```bash
+mbgray@monolyth ~/homework (git)-[master] % vim lab1.txt
+mbgray@monolyth ~/homework (git)-[master] % vim lab2.txt
+mbgray@monolyth ~/homework (git)-[master] % git status
+On branch master
+
+Initial commit
+
+Untracked files:
+(use "git add <file>..." to include in what will be committed)
+
+lab1.txt
+lab2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+                        </div>
+                    </section>
+
+                    <section><!-- Add files ready to commit -->
+                        <div data-markdown>
+## Add files ready to commit
+```bash
+git add .
+git status
+```
+
+Should show something like...
+                        </div>
+
+                        <div data-markdown class="fragment roll-in">
+```bash
+mbgray@monolyth ~/homework (git)-[master] % git add .
+mbgray@monolyth ~/homework (git)-[master] % git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+(use "git rm --cached <file>..." to unstage)
+
+new file:   lab1.txt
+new file:   lab2.txt
+```
+                        </div>
+                    </section>
+
+                    <section data-markdown><!-- Commit your work -->
+## Commit your work
+```bash
+git commit
+```
+Puts you into a text editor requesting a commit message
+```
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#»······new file:   lab1.txt
+#»······new file:   lab2.txt
+#
+```
+
+Type something meaningful, like "Finished lab 1 + lab 2"
+
+When you're ready, save and quit with :wq
+                    </section>
+
+                    <section data-markdown><!-- Check out the log -->
+## Check out the log
+```bash
+git log
+```
+Should show something like...
+```bash
+mbgray@monolyth ~/homework (git)-[master] % git log
+commit 93b4e770e61aaf1b0b7b20cb2b69c4a99278a664
+Author: Matthew B. Gray <himself@matthew.geek.nz>
+Date:   Thu Jan 4 01:30:52 2015 +1300
+
+Finished lab 1 + lab 2
+```
+Note, because this is small, it wont open in a pager
+                    </section>
+
+                    <section data-markdown><!-- commands overview -->
+                        <script type="text/template">
+###Those commands again
+* git init <-- Create a new repository
+* git add . <-- Get ready to save my work
+* git commit  <-- Save 'added' work in a commit
+<hr/>
+* git status <-- Tell me what's going on
+* git log <-- Show changes that lead up to my current state
+                        </script>
+                    </section>
+
+                    <section><!-- new commands -->
+                        <h2>moar plz</h2>
+                        <ul>
+                        <li>
+                            <code>git show </code>
+                            <span class="fragment roll-in">&lt;-- Show me changes I just commited</span>
+                        </li>
+                        <li>
+                            <code>git diff </code>
+                            <span class="fragment roll-in">&lt;-- What unsaved changes have I made?</span>
+                        </li>
+                        <li>
+                            <code>git checkout . </code>
+                            <span class="fragment roll-in">&lt;-- Throw away my unsaved changes</span>
+                        </li>
+                        </ul>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+![placeholder image](img/dolphin.gif "wtf Matthew")
+                        </script>
+                    </section>
+
+                    <section><!-- git show -->
+                        <div data-markdown>
+## Lets try these commands
+```bash
+git status
+git show
+```
+should give...
+                        </div>
+                        <div data-markdown class="fragment roll-in">
+```bash
+mbgray@monolyth ~/homework (git)-[master] % git status
+On branch master
+nothing to commit, working directory clean
+
+mbgray@monolyth ~/homework (git)-[master] % git show
+commit 93b4e770e61aaf1b0b7b20cb2b69c4a99278a664
+Author: Matthew B. Gray <himself@matthew.geek.nz>
+Date:   Thu Jan 8 04:30:52 2015 +1300
+
+Finished lab 1 + lab 2
+
+diff --git a/lab1.txt b/lab1.txt
+new file mode 100644
+index 0000000..b1a17ba
+--- /dev/null
++++ b/lab1.txt
+@@ -0,0 +1 @@
++old stuff
++old stuff
++old stuff
+diff --git a/lab2.txt b/lab2.txt
+new file mode 100644
+index 0000000..d6d6d41
+--- /dev/null
++++ b/lab2.txt
+@@ -0,0 +1 @@
++old stuff
++old stuff
++old stuff
+```
+                        </div>
+                    </section>
+
+                    <section><!-- git diff -->
+                        <div data-markdown>
+## Edit your files
+```bash
+git diff
+vim lab1.txt
+
+# Check what changed
+git status
+git diff
+```
+Should show something like...
+                        </div>
+
+                        <div data-markdown class="fragment roll-in">
+```bash
+mbgray@monolyth ~/homework (git)-[master] % git diff
+
+mbgray@monolyth ~/homework (git)-[master] % vim lab1.txt
+mbgray@monolyth ~/homework (git)-[master] % git status
+On branch master
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git checkout -- <file>..." to discard changes in working directory)
+
+modified:   lab1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mbgray@monolyth ~/homework (git)-[master] % git diff
+diff --git a/lab1.txt b/lab1.txt
+index b1a17ba..f55c2ce 100644
+--- a/lab1.txt
++++ b/lab1.txt
+@@ -1 +1,2 @@
+old stuff
++new stuff
+old stuff
+-removed stuff
+old stuff
+```
+                        </div>
+                    </section>
+
+                    <section><!-- throw away your changes -->
+                        <div data-markdown>
+## Throw away your changes
+```bash
+git status
+git checkout .
+git status
+```
+Should give something like...
+                        </div>
+                        <div data-markdown class="fragment roll-in">
+```bash
+mbgray@monolyth ~/homework (git)-[master] % git status
+On branch master
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git checkout -- <file>..." to discard changes in working directory)
+
+modified:   lab1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mbgray@monolyth ~/homework (git)-[master] % git checkout .
+mbgray@monolyth ~/homework (git)-[master] % git status
+On branch master
+nothing to commit, working directory clean
+```
+                        </div>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### Commands so far
+
+**Change things: create, save, reset**
+
+* git init <-- Create a new repository
+* git add . <-- Get ready to save my work
+* git commit  <-- Save 'added' work in a commit
+* git checkout . <-- Throw away my unsaved changes
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### Commands so far
+
+**Check things: state, history, changes**
+
+* git status </code> &lt;-- Tell me what's going on
+* git log </code> &lt;-- Show changes that lead up to my current state
+* git show </code>&lt;-- Show me changes I just commited
+* git diff </code>&lt;-- What changes have I made?
+                        </script>
+                    </section>
+                    <section data-background-image="img/russian-dolls.gif"></section>
+
+                </section>
 
 
 
