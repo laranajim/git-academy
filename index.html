@@ -520,7 +520,119 @@ nothing to commit, working directory clean
 * git diff </code>&lt;-- What changes have I made?
                         </script>
                     </section>
+
                     <section data-background-image="img/russian-dolls.gif"></section>
+
+                </section>
+
+                <section><!-- Remotes -->
+                    <section data-markdown>
+                        <script type="text/template">
+### How do I get at existing repos?
+git clone &lt; url &gt;
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+http(s)://...
+
+(s)ftp://...
+
+git://...
+
+file://...
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### Have you seen this octocat?
+![placeholder image](img/github-octocat.png "Octocat")
+                        </script>
+                    </section>
+
+                    <section>
+                        <div data-markdown>
+## Github
+Many projects host their code on Github
+
+...but ...why octocat?
+                        </div>
+                        <hr>
+                        <div class="fragment roll-in">
+                        <p>Git has a command called octomerge</p>
+                        </div>
+                        <div class="fragment roll-in">
+                        <p>The internet is made out of cats</p>
+                        </div>
+                        <p>&nbsp;</p>
+                        <p class="fragment roll-in">Git + Internet = Github</p>
+                        <p class="fragment roll-in">Octopus + Cat = Octocat!!</p>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+![placeholder image](img/derive-batman.jpg "I'm Batman!")
+
+ ...similarly, derive bruce wane from batman
+                        </script>
+                    </section>
+
+                    <section data-background-image="img/back-to-the-future.gif"></section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### History tiem!!1!
+* Git
+    * Who: Linus Torvalds
+    * When: ~04-2005 (~10 years old)
+    * Where: git-scm.com
+    * Why: Frustration with Bitkeeper
+
+* Github
+    * Who: Tom + Chris + PJ
+    * When: 04-2008 (~7 years old)
+    * Where: github.com
+    * Why: Commercial interests
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+Go setup a github account!
+
+http://github.com
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### Git and Secure SHell (SSH)
+The best way to interact with github is using ssh
+
+SSH uses public/private key pairs
+
+Lets set that up quickly
+```bash
+# Generate SSH keys
+ssh-keygen -t rsa -C "your_email@example.com"
+
+# You should see them in ~/.ssh
+ls -l ~/.ssh
+cat ~/.ssh/id_rsa.pub
+            ```
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+Take the text from ***~/.ssh/id_rsa.pub*** and put it into github
+![1 Settings, 2 SSH keys, 3 Add SSH key](img/github-ssh.png)
+                        </script>
+                    </section>
+
+                    <section data-background-image="img/skateboards.gif"></section>
 
                 </section>
 
