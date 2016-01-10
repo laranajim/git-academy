@@ -220,7 +220,7 @@ git config --global color.ui auto
 ## Create your repo
 ```bash
 # Create a new homework repository
-mkdir homework      #WIN: md homework
+mkdir homework
 cd homework
 git init
 
@@ -232,11 +232,11 @@ Should show something like...
 
                         <div class="fragment roll-in" data-markdown>
 ```bash
-mbgray@monolyth ~ % mkdir homework
-mbgray@monolyth ~ % cd homework
-mbgray@monolyth ~/homework % git init
-Initialized empty Git repository in /home/mbgray/homework/.git/
-mbgray@monolyth ~/homework (git)-[master] % git status
+trainer@academy ~ $ mkdir homework
+trainer@academy ~ $ cd homework
+trainer@academy ~/homework $ git init
+Initialized empty Git repository in /home/trainer/homework/.git/
+trainer@academy ~/homework $ git status
 On branch master
 
 Initial commit
@@ -250,8 +250,8 @@ nothing to commit (create/copy files and use "git add" to track)
                         <div data-markdown>
 ## Create some files
 ```
-touch lab1.txt      #WIN: echo $null >> lab1.txt
-touch lab2.txt      #WIN: echo $null >> lab2.txt
+touch lab1.txt
+touch lab2.txt
 git status
 ```
 
@@ -260,9 +260,9 @@ Should show something like...
 
                         <div data-markdown class="fragment roll-in">
 ```bash
-mbgray@monolyth ~/homework (git)-[master] % vim lab1.txt
-mbgray@monolyth ~/homework (git)-[master] % vim lab2.txt
-mbgray@monolyth ~/homework (git)-[master] % git status
+trainer@academy ~/homework $ vim lab1.txt
+trainer@academy ~/homework $ vim lab2.txt
+trainer@academy ~/homework $ git status
 On branch master
 
 Initial commit
@@ -291,8 +291,8 @@ Should show something like...
 
                         <div data-markdown class="fragment roll-in">
 ```bash
-mbgray@monolyth ~/homework (git)-[master] % git add .
-mbgray@monolyth ~/homework (git)-[master] % git status
+trainer@academy ~/homework $ git add .
+trainer@academy ~/homework $ git status
 On branch master
 
 Initial commit
@@ -338,10 +338,10 @@ git log
 ```
 Should show something like...
 ```bash
-mbgray@monolyth ~/homework (git)-[master] % git log
+trainer@academy ~/homework $ git log
 commit 93b4e770e61aaf1b0b7b20cb2b69c4a99278a664
-Author: Matthew B. Gray <himself@matthew.geek.nz>
-Date:   Thu Jan 4 01:30:52 2015 +1300
+Author: Julia Larsen <julia@catalyst.net.nz>
+Date:   Tue Jan 12 01:30:52 2016 +1300
 
 Finished lab 1 + lab 2
 ```
@@ -389,14 +389,14 @@ should give...
                         </div>
                         <div data-markdown class="fragment roll-in">
 ```bash
-mbgray@monolyth ~/homework (git)-[master] % git status
+trainer@academy ~/homework $ git status
 On branch master
 nothing to commit, working directory clean
 
-mbgray@monolyth ~/homework (git)-[master] % git show
+trainer@academy ~/homework $ git show
 commit 93b4e770e61aaf1b0b7b20cb2b69c4a99278a664
-Author: Matthew B. Gray <himself@matthew.geek.nz>
-Date:   Thu Jan 8 04:30:52 2015 +1300
+Author: Julia Larsen <julia@catalyst.net.nz>
+Date:   Tue Jan 12 01:30:52 2016 +1300
 
 Finished lab 1 + lab 2
 
@@ -438,10 +438,10 @@ Should show something like...
 
                         <div data-markdown class="fragment roll-in">
 ```bash
-mbgray@monolyth ~/homework (git)-[master] % git diff
+trainer@academy ~/homework $ git diff
 
-mbgray@monolyth ~/homework (git)-[master] % vim lab1.txt
-mbgray@monolyth ~/homework (git)-[master] % git status
+trainer@academy ~/homework $ vim lab1.txt
+trainer@academy ~/homework $ git status
 On branch master
 Changes not staged for commit:
 (use "git add <file>..." to update what will be committed)
@@ -451,7 +451,7 @@ modified:   lab1.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
-mbgray@monolyth ~/homework (git)-[master] % git diff
+trainer@academy ~/homework $ git diff
 diff --git a/lab1.txt b/lab1.txt
 index b1a17ba..f55c2ce 100644
 --- a/lab1.txt
@@ -478,7 +478,7 @@ Should give something like...
                         </div>
                         <div data-markdown class="fragment roll-in">
 ```bash
-mbgray@monolyth ~/homework (git)-[master] % git status
+trainer@academy ~/homework $ git status
 On branch master
 Changes not staged for commit:
 (use "git add <file>..." to update what will be committed)
@@ -488,8 +488,8 @@ modified:   lab1.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
-mbgray@monolyth ~/homework (git)-[master] % git checkout .
-mbgray@monolyth ~/homework (git)-[master] % git status
+trainer@academy ~/homework $ git checkout .
+trainer@academy ~/homework $ git status
 On branch master
 nothing to commit, working directory clean
 ```
@@ -521,8 +521,6 @@ nothing to commit, working directory clean
 * git diff <-- What changes have I made?
                         </script>
                     </section>
-
-                    <section data-background-image="img/russian-dolls.gif"></section>
 
                 </section>
 
@@ -667,14 +665,6 @@ git pull
 # After commiting, push those changes to github
 git push
 ```
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-### Win
-
-![](https://i.imgur.com/tnC3gEe.gif)
                         </script>
                     </section>
 
