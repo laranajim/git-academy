@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Just enough git for the academy</title>
+        <title>Git for the Academy</title>
 
         <meta name="author" content="Catalyst">
 
@@ -63,8 +63,16 @@
                     <section data-markdown>
                         <script type="text/template">
 # Catalyst <!-- .element: class="catalyst-logo" -->
-### Just Enough git for the Academy
-Presented by <!-- .element: class="small-text" --> [Robert Higgins](https://github.com/roberthiggins) <!-- .element: class="small-text" -->
+### Just Enough Git for the Academy
+Presented by <!-- .element: class="small-text" --> Julie and Evan <!-- .element: class="small-text" -->
+                        </script>
+                    </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+### Administrivia
+* Follow along as we go
+* Any questions just shout
                         </script>
                     </section>
 
@@ -73,7 +81,8 @@ Presented by <!-- .element: class="small-text" --> [Robert Higgins](https://gith
 ### Special Thanks
 * Ian - Most of the organising for Academy
 * Alison - Gets training like this funded
-* [Matthew Gray](https://github.com/theflimflam) - Made v1 of these slides
+* Matthew Gray - Slides the first
+* Robert Higgins - Slides the second
                         </script>
                     </section>
                 </section>
@@ -86,18 +95,18 @@ Presented by <!-- .element: class="small-text" --> [Robert Higgins](https://gith
                     <aside data-notes>
 Hands up.
 
-* Who has heard of git?
-* Who has used git?
-* Who has heard of github?
-* Who has an account on github?
+* Who has heard of Git?
+* Who has used Git?
+* Who has heard of Github? (or Gitlab or Bitbucket or ...)
+* Who has an account on Github?
 * Who knows what a pull request is?
                     </aside>
                 </section>
 
-                <section><!-- What is git?? -->
+                <section><!-- What is Git?? -->
                     <section data-markdown><!-- Simplified explanation -->
                         <script type="text/template">
-### What is git?
+### What is Git?
 * Git is revision control for files<!-- .element: class="fragment" -->
 * What is revision control?<!-- .element: class="fragment" -->
 * Revision control is like the save button for your work<!-- .element: class="fragment" -->
@@ -121,7 +130,7 @@ Hands up.
                         </script>
 
                         <aside data-notes>
-###Using git, you can
+###Using Git, you can
 
 * Share
 * Backup
@@ -133,18 +142,18 @@ Hands up.
                         <script type="text/template">
 ###Because sometimes...
                         </script>
-                        <aside data-notes>git can save you</aside>
+                        <aside data-notes>Git can save you</aside>
                     </section>
                 </section>
 
-                <section><!-- How can I use git -->
+                <section><!-- How can I use Git -->
                     <section data-markdown><!-- The basic principle -->
                         <script type="text/template">
-### How can I use git for my work?
+### How do I use Git for my work?
 * Runs on Linux, Mac OSX and Windows
 * Git tracks an entire directory of files
-* Text files are best (like html,css)
-* Binary files can work to (like docx,odt,jpg,gif)
+* Text files are best (like html, css)
+* Binary files can work to (like docx, odt, jpg, gif)
 * Pretty much anything you give it
                         </script>
                     </section>
@@ -167,14 +176,14 @@ Hands up.
                         </script>
                     </section>
 
-                    <section data-markdown><!-- setup your git -->
-### Setup your git
+                    <section data-markdown><!-- setup your Git -->
+### Setup your Git
 Open a shell, and...
 ```bash
-# Install git
+# Install Git
 sudo apt-get install git
 
-# Configure git, stores these in ~/.gitconfig
+# Configure Git, stores these in ~/.gitconfig
 git config --global user.name "my full name"
 git config --global user.email "your_email@example.com"
 git config --global core.editor vim
@@ -354,7 +363,7 @@ Note, because this is small, it wont open in a pager
                     </section>
 
                     <section><!-- new commands -->
-                        <h2>moar plz</h2>
+                        <h2>More</h2>
                         <ul>
                         <li>
                             <code>git show </code>
@@ -557,7 +566,7 @@ file://...
 ## Github
 Many projects host their code on Github
 
-...but ...why octocat?
+... But... Why Octocat?
                         </div>
                         <hr>
                         <div class="fragment roll-in">
@@ -567,23 +576,14 @@ Many projects host their code on Github
                         <p>The internet is made out of cats</p>
                         </div>
                         <p>&nbsp;</p>
-                        <p class="fragment roll-in">Git + Internet = Github</p>
                         <p class="fragment roll-in">Octopus + Cat = Octocat!!</p>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-![placeholder image](img/derive-batman.jpg "I'm Batman!")
-
- ...similarly, derive bruce wane from batman
-                        </script>
                     </section>
 
                     <section data-background-image="img/back-to-the-future.gif"></section>
 
                     <section data-markdown>
                         <script type="text/template">
-### History tiem!!1!
+### History time!
 * Git
     * Who: Linus Torvalds
     * When: ~04-2005 (~10 years old)
@@ -600,7 +600,7 @@ Many projects host their code on Github
 
                     <section data-markdown>
                         <script type="text/template">
-Go setup a github account!
+Go setup a Github account!
 
 http://github.com
                         </script>
@@ -609,7 +609,7 @@ http://github.com
                     <section data-markdown>
                         <script type="text/template">
 ### Git and Secure SHell (SSH)
-The best way to interact with github is using ssh
+The best way to interact with Github is using ssh
 
 SSH uses public/private key pairs
 
@@ -627,7 +627,7 @@ cat ~/.ssh/id_rsa.pub
 
                     <section data-markdown>
                         <script type="text/template">
-Take the text from ***~/.ssh/id_rsa.pub*** and put it into github
+Take the text from ***~/.ssh/id_rsa.pub*** and put it into Github
 ![1 Settings, 2 SSH keys, 3 Add SSH key](img/github-ssh.png)
                         </script>
                     </section>
@@ -639,11 +639,11 @@ Take the text from ***~/.ssh/id_rsa.pub*** and put it into github
                 <section>
                     <section data-markdown>### Cool! Lets build something!</section>
                     <section data-markdown>### Some kind of website?</section>
-                    <section data-markdown>### Can github host those?</section>
+                    <section data-markdown>### Can Github host those?</section>
 
                     <section data-markdown>
                         <script type="text/template">
-### Hell yes!
+### Of course
 ![](https://i.imgur.com/0nKevZH.jpg)
                         </script>
                     </section>
@@ -657,7 +657,7 @@ To make this website, we'll be setting up a new repo
 Go here --&gt; http://pages.github.com
 
 * Select "User or organisation site"
-* Your git client is "A terminal"
+* Your Git client is "A terminal"
                         </script>
                     </section>
 
@@ -735,11 +735,13 @@ git push
                 <section>
                     <section data-markdown>
                         <script type="text/template">
-### Next week...
+### Now what?
 
-All the Academy projects are hosted in git
+#### Now go use Git!
 
-1. Follow some coding guidelines
+All the Academy projects are hosted in Git
+
+1. Find the coding guidelines
 1. Clone the code, hack on it, commit your work
 1. Submit your work...
                         </script>
@@ -747,7 +749,7 @@ All the Academy projects are hosted in git
 
                     <section data-markdown>
                         <script type="text/template">
-Here's how they differ
+Submit how?
 
 * _Drupal_: Attach commits to 'issues' as patches
 * _Koha_: Attach commits to 'bugs' as patches
@@ -762,9 +764,8 @@ Here's how they differ
                         <script type="text/template">
 ### Thanks
 
-These slides are on github
+These slides are on Github
 
-* http://catalyst-training.github.io/git-academy/
 * https://github.com/catalyst-training/git-academy
 
 If you have any feedback, please raise an Issue
